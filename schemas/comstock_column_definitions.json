@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "UnitsEnum": {
+      "type": "string",
+      "enum": [
+        "billion_usd",
+        "btu_per_ft2_f_hr",
+        "c",
+        "co2e_kg",
+        "co2e_kg_per_ft2",
+        "co2e_mmt",
+        "cop",
+        "degrees",
+        "delta_f",
+        "eer",
+        "f",
+        "ft",
+        "ft2",
+        "ft3_per_min",
+        "gal",
+        "gj",
+        "gw",
+        "hr",
+        "hspf",
+        "ieer",
+        "inwc",
+        "j",
+        "j_per_kg",
+        "kbtu",
+        "kbtu_per_hr",
+        "kw",
+        "kw_per_ft2",
+        "kwh",
+        "kwh_per_ft2",
+        "m",
+        "m2",
+        "m3",
+        "m3_per_m2_h",
+        "m3_per_m2_s",
+        "million_btu",
+        "pa",
+        "people_per_m2",
+        "percent",
+        "seer",
+        "tbtu",
+        "therm",
+        "timesteps_per_hr",
+        "tons",
+        "usd",
+        "usd_per_ft2",
+        "w",
+        "w_per_ft2",
+        "w_per_m2",
+        "w_per_m2_k"
+      ]
+    }
+  },
+  "title": "ComStock Column Definitions Schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type":  "string"
+    },
+    "columns": {
+      "type": "array",
+      "description": "Array of column definitions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "enum": ["buildstock.csv", "calculated", "cejst", "ejscreen", "geospatial", "results.csv", "timeseries"],
+            "description": "Location of the column"
+          },
+          "originalColName": {
+            "type": "string",
+            "description": "Original column name"
+          },
+          "newColName": {
+            "type": "string",
+            "description": "New column name"
+          },
+          "fullMetadata": {
+            "type": "boolean"
+          },
+          "basicMetadata": {
+            "type": "boolean"
+          },
+          "dataType": {
+            "type": "string",
+            "enum": [
+              "boolean",
+              "float",
+              "integer",
+              "string",
+              "timestamp"
+            ],
+            "description": "Type of data (e.g., integer, float, string, boolean, or timestamp)"
+          },
+          "originalUnits": {
+            "$ref": "#/$defs/UnitsEnum",
+            "description": "Original units for the column (if applicable)"
+          },
+          "newUnits": {
+            "$ref": "#/$defs/UnitsEnum",
+            "description": "New units for the column (if applicable)"
+          },
+          "fieldDescription": {
+            "type": "string",
+            "description": "Column description"
+          }
+        },
+        "required": [
+          "location",
+          "originalColName",
+          "fullMetadata",
+          "basicMetadata"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "$schema",
+    "columns"
+  ],
+  "additionalProperties": false
+}
