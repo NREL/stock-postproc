@@ -60,7 +60,7 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "type":  "string"
+      "type": "string"
     },
     "columns": {
       "type": "array",
@@ -70,7 +70,15 @@
         "properties": {
           "location": {
             "type": "string",
-            "enum": ["buildstock.csv", "calculated", "cejst", "ejscreen", "geospatial", "results.csv", "timeseries"],
+            "enum": [
+              "buildstock.csv",
+              "calculated",
+              "cejst",
+              "ejscreen",
+              "geospatial",
+              "results.csv",
+              "timeseries"
+            ],
             "description": "Location of the column"
           },
           "originalColName": {
@@ -89,13 +97,7 @@
           },
           "dataType": {
             "type": "string",
-            "enum": [
-              "boolean",
-              "float",
-              "integer",
-              "string",
-              "timestamp"
-            ],
+            "enum": ["boolean", "float", "integer", "string", "timestamp"],
             "description": "Type of data (e.g., integer, float, string, boolean, or timestamp)"
           },
           "originalUnits": {
@@ -121,9 +123,6 @@
       }
     }
   },
-  "required": [
-    "$schema",
-    "columns"
-  ],
+  "required": ["$schema", "columns"],
   "additionalProperties": false
 }

@@ -1,85 +1,55 @@
-import random
+from typing import Any
 
 from prefect import flow, task
+from prefect.cache_policies import INPUTS, TASK_SOURCE
+from prefect_aws.s3 import S3Bucket
+from pydantic import BaseModel, Field
 
-# @flow(name="ResStock Publish Baseline Annual Results")
-# def publish_baseline_annual_results(failed_bldgs: set[int], base: pl.LazyFrame) -> pl.LazyFrame:
-#     col_maps = get_col_maps()
-#     base = base.filter(~pl.col("building_id").is_in(failed_bldgs))
-#     base = get_transformed_cols(base, col_maps)
-#     base = base.with_columns(pl.lit(True).alias("applicability"))
-#     base = base.with_columns([pl.lit(0).alias("upgrade"), pl.lit("Baseline").alias("upgrade_name")])
-#     base = add_income_and_burden(base)
-#     base = add_county_column(base)
-#     base = add_puma_column(base)
-#
-#     all_cols = base.collect_schema().names()
-#     print("Fixing site energy and site emission total for baseline ...")
-#     base = fix_site_energy_total(base, all_cols)
-#     base = fix_all_fuels_emissions(base, all_cols)
-#     base = add_upgrade_columns(base)
-#     base = reorder_columns(base, col_maps, is_baseline=True)
-#     return base
+s3_com_sdr_bucket = S3Bucket.load("s3-com-sdr")
+minio_com_sdr_bucket = S3Bucket.load("minio-com-sdr")
 
 
-# @flow(name="ResStock Publish Upgrade Annual Results")
-# def publish_upgrade_annual_results(failed_bldgs: set[int], base: pl.LazyFrame, upgrade: pl.LazyFrame,
-#                                    upgrade_num: int) -> pl.LazyFrame:
-#     col_maps = get_col_maps()
-#     upgrade = upgrade.filter((~pl.col("building_id").is_in(failed_bldgs)) &
-#                              (pl.col("completed_status") == "Success"))
-#
-#     upgrade = get_transformed_cols(upgrade, col_maps)
-#     upgrade = upgrade.with_columns([pl.lit(upgrade_num).alias("upgrade")])
-#     base_cols = base.collect_schema().names()
-#     upgrade_cols = upgrade.collect_schema().names()
-#     missing_cols = list(set(base_cols) - set(upgrade_cols)) + ["bldg_id"]
-#     upgrade = upgrade.join(base.select(missing_cols), on="bldg_id", how="left")
-#     all_cols = upgrade.collect_schema().names()
-#     print("Fixing site energy and site emission total for upgrade ...")
-#     upgrade = fix_site_energy_total(upgrade, all_cols)
-#     upgrade = fix_all_fuels_emissions(upgrade, all_cols)
-#     upgrade = add_upgrade_columns(upgrade)
-#     upgrade = upgrade.with_columns(pl.lit("True").alias("applicability"))
-#     # get upgrade_name
-#     upgrade_name_df = upgrade.select(pl.col("upgrade_name").first())
-#     missing_bldgs_df = base.join(
-#         upgrade,
-#         on="bldg_id",
-#         how="anti"  # Keep rows from 'base' with no match in 'upgrade'
-#     )
-#     missing_bldgs_df = missing_bldgs_df.with_columns([
-#         pl.lit("False").alias("applicability"),
-#         pl.lit(upgrade_num).alias("upgrade"),
-#     ]).drop("upgrade_name")
-#     upgrade_cols = upgrade.collect_schema().names()
-#     missing_bldgs_df = missing_bldgs_df.join(upgrade_name_df, how="cross")
-#     upgrade = pl.concat([upgrade, missing_bldgs_df], how="diagonal_relaxed")
-#     upgrade = upgrade.sort("bldg_id")
-#     upgrade = add_saving_cols(upgrade, base)
-#     upgrade = reorder_columns(upgrade, col_maps, is_baseline=False)
-#     return upgrade
+class Inputs(BaseModel):
+    upgrade_id: int = Field(ge=0, le=57, title="Upgrade ID")
+
+
+@task(cache_policy=TASK_SOURCE + INPUTS)
+def list_parquet_files(upgrade: int) -> list[dict[str, Any]]:
+    files = s3_com_sdr_bucket.list_objects(folder=f"euss_fy25/production_runs/2025_r2/full/sdr_2025_r2_1of5_30802/sdr_2025_r2_1of5_30802/timeseries/upgrade={upgrade}/")
+    print(f"========== {len(files)} file{'' if len(files) == 1 else 's'} ==========")
+    # print(json.dumps(files, indent=2, default=str))
+    return files
 
 
 @task
-def get_building_ids() -> list[str]:
-    # Fetch building IDs from remote source
-    return [f"building{n}" for n in random.choices(range(100), k=10)]  # noqa: S311
+def cache_has_key(key: str) -> bool:
+    result = minio_com_sdr_bucket.list_objects(folder=key)
+    print(f"Cache key {'exists' if len(result) == 1 else 'does not exist'}: {key}")
+    return len(result) == 1
 
 
 @task
-def process_building(building_id: str) -> str:
-    # Process a building customer
-    return f"Processed {building_id}"
+def download_and_cache_key(key: str) -> None:
+    # TODO
+    pass
 
 
-@flow(name="ResStock")
-def resstock_demo() -> list[str]:
-    building_ids = get_building_ids()
-    results = process_building.map(building_ids)
-    return results
+@flow(name="Optimize Parquet Files", log_prints=True)
+def optimize_parquet_files(time_series: Inputs) -> list[dict[str, Any]]:
+    """
+    Given an upgrade id, fetches the first 3 files and optimizes them
+
+    Args:
+        time_series: Upgrade id, between 0 and 57
+    """
+    files = list_parquet_files(time_series.upgrade_id)
+    keys = [obj["Key"] for obj in files[:3]]
+    cache_futures = cache_has_key.map(keys)
+    missing_cache_files = [i for i, ok in zip(keys, cache_futures.result()) if not ok]
+    print("missing_cache_files", missing_cache_files)
+    # download_and_cache_key.map(missing_cache_files)
+    return files
 
 
 if __name__ == "__main__":
-    # publish_baseline_annual_results()
-    resstock_demo()
+    optimize_parquet_files(Inputs(upgrade_id=0))

@@ -27,10 +27,10 @@ pip install uv
 uv --version
 ```
 
-3. Create & activate a project venv
+3. Create the uv virtual environment and install dependencies, then activate it
 
 ```shell
-uv venv create .venv
+uv python install
 
 # macOS/Linux
 source .venv/bin/activate
@@ -39,7 +39,7 @@ source .venv/bin/activate
 .venv\Scripts\activate
 ```
 
-4. Install dependencies
+4. Update the uv dependencies
 
 ```shell
 # (Re-)generate your lockfile from pyproject.toml

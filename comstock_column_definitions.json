@@ -381,7 +381,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Seperation distance multiplier for create bar from building type ratios measure"
+      "fieldDescription": "Separation distance multiplier for create bar from building type ratios measure"
     },
     {
       "location": "results.csv",
@@ -625,7 +625,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies offest of neighbors to east of building model which impacts shading"
+      "fieldDescription": "Specifies offset of neighbors to east of building model which impacts shading"
     },
     {
       "location": "results.csv",
@@ -633,7 +633,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies offest of neighbors to north of building model which impacts shading"
+      "fieldDescription": "Specifies offset of neighbors to north of building model which impacts shading"
     },
     {
       "location": "results.csv",
@@ -641,7 +641,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies offest of neighbors to south of building model which impacts shading"
+      "fieldDescription": "Specifies offset of neighbors to south of building model which impacts shading"
     },
     {
       "location": "results.csv",
@@ -649,7 +649,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies offest of neighbors to west of building model which impacts shading"
+      "fieldDescription": "Specifies offset of neighbors to west of building model which impacts shading"
     },
     {
       "location": "results.csv",
@@ -682,7 +682,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies fraction of walls that are modeled with adiabatic boundry conditions"
+      "fieldDescription": "Specifies fraction of walls that are modeled with adiabatic boundary conditions"
     },
     {
       "location": "results.csv",
@@ -690,7 +690,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundry conditions on east fa�ade"
+      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundary conditions on east fa�ade"
     },
     {
       "location": "results.csv",
@@ -698,7 +698,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundry conditions on north fa�ade"
+      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundary conditions on north fa�ade"
     },
     {
       "location": "results.csv",
@@ -706,7 +706,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundry conditions on south fa�ade"
+      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundary conditions on south fa�ade"
     },
     {
       "location": "results.csv",
@@ -714,7 +714,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundry conditions on west fa�ade"
+      "fieldDescription": "Specifies how many above grade walls are modeled with adiabatic boundary conditions on west fa�ade"
     },
     {
       "location": "results.csv",
@@ -747,7 +747,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "string",
-      "fieldDescription": "Specifies calculation method for story mutliplier"
+      "fieldDescription": "Specifies calculation method for story multiplier"
     },
     {
       "location": "results.csv",
@@ -790,7 +790,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "float",
-      "fieldDescription": "Specifies the fraction of total exterior window area to total verticle fa�ade area"
+      "fieldDescription": "Specifies the fraction of total exterior window area to total vertical fa�ade area"
     },
     {
       "location": "results.csv",
@@ -814,7 +814,7 @@
       "fullMetadata": false,
       "basicMetadata": false,
       "dataType": "boolean",
-      "fieldDescription": "Specifies if exhasut fans have been added to model"
+      "fieldDescription": "Specifies if exhaust fans have been added to model"
     },
     {
       "location": "results.csv",
@@ -1117,7 +1117,7 @@
       "fullMetadata": true,
       "basicMetadata": true,
       "dataType": "string",
-      "fieldDescription": "Specifies the date of contruction of the modeled building which impacts the assumed energy code year of building subsystems"
+      "fieldDescription": "Specifies the date of construction of the modeled building which impacts the assumed energy code year of building subsystems"
     },
     {
       "location": "results.csv",
@@ -1248,7 +1248,7 @@
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "string",
-      "fieldDescription": "Specifies the HVAC nighttime hvac operation used in model, which impacts fan and ventialtion behavior during unnoccupied times"
+      "fieldDescription": "Specifies the HVAC nighttime hvac operation used in model, which impacts fan and ventilation behavior during unnoccupied times"
     },
     {
       "location": "results.csv",
@@ -1415,7 +1415,7 @@
       "dataType": "float",
       "originalUnits": "degrees",
       "newUnits": "degrees",
-      "fieldDescription": "Specifies the roation in degrees of the building relative to the North axis"
+      "fieldDescription": "Specifies the rotation in degrees of the building relative to the North axis"
     },
     {
       "location": "results.csv",
@@ -3514,7 +3514,7 @@
       "dataType": "float",
       "originalUnits": "percent",
       "newUnits": "percent",
-      "fieldDescription": "Percent savings of maximum hourly daily electric load peak during Febuary"
+      "fieldDescription": "Percent savings of maximum hourly daily electric load peak during February"
     },
     {
       "location": "calculated",
@@ -3558,7 +3558,7 @@
       "dataType": "float",
       "originalUnits": "percent",
       "newUnits": "percent",
-      "fieldDescription": "Percent savings of maximum hourly daily electric load peak per floor area during Febuary"
+      "fieldDescription": "Percent savings of maximum hourly daily electric load peak per floor area during February"
     },
     {
       "location": "calculated",
@@ -3811,7 +3811,7 @@
       "dataType": "float",
       "originalUnits": "percent",
       "newUnits": "percent",
-      "fieldDescription": "Percent savings of median hourly daily electric load peak during Febuary"
+      "fieldDescription": "Percent savings of median hourly daily electric load peak during February"
     },
     {
       "location": "calculated",
@@ -3855,7 +3855,7 @@
       "dataType": "float",
       "originalUnits": "percent",
       "newUnits": "percent",
-      "fieldDescription": "Percent savings of median hourly daily electric load peak per floor area during Febuary"
+      "fieldDescription": "Percent savings of median hourly daily electric load peak per floor area during February"
     },
     {
       "location": "calculated",
@@ -5668,7 +5668,7 @@
       "dataType": "float",
       "originalUnits": "percent",
       "newUnits": "percent",
-      "fieldDescription": "Stock total savings of maximum hourly daily electric load peak during Febuary"
+      "fieldDescription": "Stock total savings of maximum hourly daily electric load peak during February"
     },
     {
       "location": "calculated",
@@ -5833,7 +5833,7 @@
       "dataType": "float",
       "originalUnits": "percent",
       "newUnits": "percent",
-      "fieldDescription": "Stock total savings of median hourly daily electric load peak during Febuary"
+      "fieldDescription": "Stock total savings of median hourly daily electric load peak during February"
     },
     {
       "location": "calculated",
@@ -6514,7 +6514,7 @@
       "dataType": "float",
       "originalUnits": "w",
       "newUnits": "w",
-      "fieldDescription": "Peak exterior lighting electricty usage"
+      "fieldDescription": "Peak exterior lighting electricity usage"
     },
     {
       "location": "results.csv",
@@ -6818,7 +6818,7 @@
       "dataType": "float",
       "originalUnits": "m3",
       "newUnits": "m3",
-      "fieldDescription": "total water use from cooling towers includeing evaporation, drift, and blowdown"
+      "fieldDescription": "total water use from cooling towers including evaporation, drift, and blowdown"
     },
     {
       "location": "results.csv",
@@ -9252,58 +9252,58 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.cooling.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.cooling.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
       "originalUnits": "co2e_kg",
       "newUnits": "co2e_kg",
-      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 aer_95_decarb_by_2035non-levelized values from 2023non-levelized values from 2023"
+      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 are_95_decarb_by_2035non-levelized values from 2023non-levelized values from 2023"
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.cooling.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.cooling.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
       "originalUnits": "co2e_kg",
       "newUnits": "co2e_kg",
-      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 aer_95_decarb_by_2050 non-levelized values from 2023"
+      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 are_95_decarb_by_2050 non-levelized values from 2023"
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.cooling.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.cooling.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
       "originalUnits": "co2e_kg",
       "newUnits": "co2e_kg",
-      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 aer_high_re_cost non-levelized values from 2023"
+      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 are_high_re_cost non-levelized values from 2023"
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.cooling.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.cooling.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
       "originalUnits": "co2e_kg",
       "newUnits": "co2e_kg",
-      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 aer_low_re_cost non-levelized values from 2023"
+      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 are_low_re_cost non-levelized values from 2023"
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.cooling.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_cooling_hvac_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.cooling.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
       "originalUnits": "co2e_kg",
       "newUnits": "co2e_kg",
-      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 aer_mid_case non-levelized values from 2023"
+      "fieldDescription": "annual greenhouse gas emissions from electricity for the cooling end use, using Cambium 2022 are_mid_case non-levelized values from 2023"
     },
     {
       "location": "results.csv",
@@ -9593,8 +9593,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9604,8 +9604,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9615,8 +9615,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9626,8 +9626,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9637,8 +9637,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9912,8 +9912,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.exterior_lights.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.exterior_lights.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9923,8 +9923,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.exterior_lights.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.exterior_lights.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9934,8 +9934,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.exterior_lights.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.exterior_lights.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9945,8 +9945,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.exterior_lights.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.exterior_lights.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -9956,8 +9956,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.exterior_lights.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_exterior_lights_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.exterior_lights.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10297,8 +10297,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.heating.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.heating.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10308,8 +10308,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.heating.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.heating.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10319,8 +10319,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.heating.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.heating.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10330,8 +10330,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.heating.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.heating.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10341,8 +10341,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.heating.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_heating_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.heating.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10671,8 +10671,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.interior_equipment.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.interior_equipment.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10682,8 +10682,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.interior_equipment.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.interior_equipment.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10693,8 +10693,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.interior_equipment.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.interior_equipment.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10704,8 +10704,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.interior_equipment.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.interior_equipment.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -10715,8 +10715,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.interior_equipment.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_equipment_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.interior_equipment.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11023,8 +11023,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.interior_lights.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.interior_lights.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11034,8 +11034,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.interior_lights.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.interior_lights.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11045,8 +11045,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.interior_lights.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.interior_lights.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11056,8 +11056,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.interior_lights.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.interior_lights.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11067,8 +11067,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.interior_lights.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_interior_lights_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.interior_lights.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11452,8 +11452,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.refrigeration.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.refrigeration.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11463,8 +11463,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.refrigeration.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.refrigeration.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11474,8 +11474,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.refrigeration.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.refrigeration.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11485,8 +11485,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.refrigeration.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.refrigeration.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11496,8 +11496,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.refrigeration.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_refrigeration_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.refrigeration.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11793,8 +11793,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.enduse_group.hvac.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.enduse_group.hvac.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11804,8 +11804,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.enduse_group.hvac.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.enduse_group.hvac.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11815,8 +11815,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.enduse_group.hvac.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.enduse_group.hvac.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11826,8 +11826,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.enduse_group.hvac.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.enduse_group.hvac.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -11837,8 +11837,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.enduse_group.hvac.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_total_hvac_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.enduse_group.hvac.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -12167,8 +12167,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_aer_95_decarb_by_2035_kg",
-      "newColName": "out.emissions.electricity.water_systems.aer_95_decarb_by_2035_from_2023",
+      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_are_95_decarb_by_2035_kg",
+      "newColName": "out.emissions.electricity.water_systems.are_95_decarb_by_2035_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -12178,8 +12178,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_aer_95_decarb_by_2050_kg",
-      "newColName": "out.emissions.electricity.water_systems.aer_95_decarb_by_2050_from_2023",
+      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_are_95_decarb_by_2050_kg",
+      "newColName": "out.emissions.electricity.water_systems.are_95_decarb_by_2050_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -12189,8 +12189,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_aer_high_re_cost_kg",
-      "newColName": "out.emissions.electricity.water_systems.aer_high_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_are_high_re_cost_kg",
+      "newColName": "out.emissions.electricity.water_systems.are_high_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -12200,8 +12200,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_aer_low_re_cost_kg",
-      "newColName": "out.emissions.electricity.water_systems.aer_low_re_cost_from_2023",
+      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_are_low_re_cost_kg",
+      "newColName": "out.emissions.electricity.water_systems.are_low_re_cost_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -12211,8 +12211,8 @@
     },
     {
       "location": "results.csv",
-      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_aer_mid_case_kg",
-      "newColName": "out.emissions.electricity.water_systems.aer_mid_case_from_2023",
+      "originalColName": "emissions_reporting.annual_water_systems_electricity_ghg_emissions_are_mid_case_kg",
+      "newColName": "out.emissions.electricity.water_systems.are_mid_case_from_2023",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "float",
@@ -13091,7 +13091,7 @@
     {
       "location": "buildstock.csv",
       "originalColName": "iso_region",
-      "newColName": "in.iso_rto_region",
+      "newColName": "in.iso_to_region",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "string",
@@ -13100,7 +13100,7 @@
     {
       "location": "geospatial",
       "originalColName": "iso_region",
-      "newColName": "in.iso_rto_region",
+      "newColName": "in.iso_to_region",
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "string",
@@ -14707,7 +14707,7 @@
       "dataType": "float",
       "originalUnits": "kw_per_ft2",
       "newUnits": "kw_per_ft2",
-      "fieldDescription": "Maximum hourly daily electric load peak per floor area during Febuary"
+      "fieldDescription": "Maximum hourly daily electric load peak per floor area during February"
     },
     {
       "location": "calculated",
@@ -14839,7 +14839,7 @@
       "dataType": "float",
       "originalUnits": "kw",
       "newUnits": "kw",
-      "fieldDescription": "Savings of maximum hourly daily electric load peak during Febuary"
+      "fieldDescription": "Savings of maximum hourly daily electric load peak during February"
     },
     {
       "location": "calculated",
@@ -14883,7 +14883,7 @@
       "dataType": "float",
       "originalUnits": "kw_per_ft2",
       "newUnits": "kw_per_ft2",
-      "fieldDescription": "Savings of maximum hourly daily electric load peak per floor area during Febuary"
+      "fieldDescription": "Savings of maximum hourly daily electric load peak per floor area during February"
     },
     {
       "location": "calculated",
@@ -15136,7 +15136,7 @@
       "dataType": "float",
       "originalUnits": "kw_per_ft2",
       "newUnits": "kw_per_ft2",
-      "fieldDescription": "Median hourly daily electric load peak per floor area during Febuary"
+      "fieldDescription": "Median hourly daily electric load peak per floor area during February"
     },
     {
       "location": "calculated",
@@ -15268,7 +15268,7 @@
       "dataType": "float",
       "originalUnits": "kw",
       "newUnits": "kw",
-      "fieldDescription": "Savings of median hourly daily electric load peak during Febuary"
+      "fieldDescription": "Savings of median hourly daily electric load peak during February"
     },
     {
       "location": "calculated",
@@ -15312,7 +15312,7 @@
       "dataType": "float",
       "originalUnits": "kw_per_ft2",
       "newUnits": "kw_per_ft2",
-      "fieldDescription": "Savings of median hourly daily electric load peak per floor area during Febuary"
+      "fieldDescription": "Savings of median hourly daily electric load peak per floor area during February"
     },
     {
       "location": "calculated",
@@ -16085,7 +16085,7 @@
       "fullMetadata": true,
       "basicMetadata": false,
       "dataType": "string",
-      "fieldDescription": "Who has the most direct input on decisions regarding pruchases of energy-related equipment"
+      "fieldDescription": "Who has the most direct input on decisions regarding purchases of energy-related equipment"
     },
     {
       "location": "results.csv",
@@ -16296,7 +16296,7 @@
       "dataType": "float",
       "originalUnits": "kw",
       "newUnits": "kw",
-      "fieldDescription": "Maximum hourly daily electric load peak during Febuary"
+      "fieldDescription": "Maximum hourly daily electric load peak during February"
     },
     {
       "location": "results.csv",
@@ -16428,7 +16428,7 @@
       "dataType": "float",
       "originalUnits": "kw",
       "newUnits": "kw",
-      "fieldDescription": "Median hourly daily electric load peak during Febuary"
+      "fieldDescription": "Median hourly daily electric load peak during February"
     },
     {
       "location": "results.csv",
@@ -16560,7 +16560,7 @@
       "dataType": "float",
       "originalUnits": "hr",
       "newUnits": "hr",
-      "fieldDescription": "Median hour of daily electric load peak during Febuary"
+      "fieldDescription": "Median hour of daily electric load peak during February"
     },
     {
       "location": "results.csv",
@@ -16692,7 +16692,7 @@
       "dataType": "float",
       "originalUnits": "kw",
       "newUnits": "kw",
-      "fieldDescription": "Minimum hourly daily electric load peak during Febuary"
+      "fieldDescription": "Minimum hourly daily electric load peak during February"
     },
     {
       "location": "results.csv",
@@ -16824,7 +16824,7 @@
       "dataType": "float",
       "originalUnits": "kw",
       "newUnits": "kw",
-      "fieldDescription": "First quartile of hourly daily electric load peak during Febuary"
+      "fieldDescription": "First quartile of hourly daily electric load peak during February"
     },
     {
       "location": "results.csv",
@@ -16956,7 +16956,7 @@
       "dataType": "float",
       "originalUnits": "kw",
       "newUnits": "kw",
-      "fieldDescription": "Third quartile of hourly daily electric load peak during Febuary"
+      "fieldDescription": "Third quartile of hourly daily electric load peak during February"
     },
     {
       "location": "results.csv",
@@ -17088,7 +17088,7 @@
       "dataType": "float",
       "originalUnits": "kwh",
       "newUnits": "kwh",
-      "fieldDescription": "Total electricity energy consumption during Febuary"
+      "fieldDescription": "Total electricity energy consumption during February"
     },
     {
       "location": "results.csv",

@@ -25,12 +25,7 @@
           },
           "data_type": {
             "type": "string",
-            "enum": [
-              "boolean",
-              "float",
-              "integer",
-              "string"
-            ],
+            "enum": ["boolean", "float", "integer", "string"],
             "description": "Type of data (e.g. integer, float, string, boolean)"
           },
           "units": {

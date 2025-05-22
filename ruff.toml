@@ -1,6 +1,6 @@
 # https://docs.astral.sh/ruff/settings/
 fix = true
-line-length = 120
+line-length = 200
 
 # https://docs.astral.sh/ruff/settings/#format
 [format]
