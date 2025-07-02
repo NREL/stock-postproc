@@ -1,0 +1,104 @@
+services:
+  prefect:
+    container_name: prefect
+    image: prefecthq/prefect:3-latest
+    depends_on:
+      - prefect-db
+    env_file:
+      - ./.env
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./prefect:/root/.prefect
+    environment:
+      PREFECT_API_DATABASE_CONNECTION_URL: postgresql+asyncpg://prefect:password@prefect-db:5432/prefect
+    command: prefect server start --host 0.0.0.0 --port 4200
+    restart: unless-stopped
+
+  prefect-db:
+    container_name: prefect-db
+    image: postgres:17-alpine3.22
+    environment:
+      - POSTGRES_DB=prefect
+      - POSTGRES_USER=prefect
+      - POSTGRES_PASSWORD=password
+      - PGDATA=/var/lib/postgresql/17/docker
+    volumes:
+      - ./pgdata:/var/lib/postgresql/17/docker
+    restart: unless-stopped
+
+  prefect-worker:
+    container_name: prefect-worker
+    build: ./worker
+    image: prefect-worker:latest
+    depends_on:
+      - prefect
+    env_file:
+      - ./.env
+    environment:
+      - PREFECT_API_URL=http://prefect:4200/api
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: prefect worker start --pool docker-pool --type docker --name DockerWorker
+    restart: unless-stopped
+
+  minio:
+    container_name: minio
+    image: minio/minio:RELEASE.2025-04-22T22-12-26Z
+    restart: unless-stopped
+    ports:
+      - "10000:10000"
+      - "10001:10001"
+    volumes:
+      - ./minio:/data
+      - ./.env:/etc/config.env
+    environment:
+      MINIO_CONFIG_ENV_FILE: /etc/config.env
+    command: server --address :10000 --console-address :10001
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:10000/minio/health/live"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  init-minio:
+    container_name: init-minio
+    image: minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+        # configure the mc alias for the MinIO server
+        mc alias set local http://minio:10000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
+        # configure compression for html and svg files
+        mc admin config set local compression extensions='.txt, .log, .csv, .json, .tar, .xml, .bin, .html, .svg'
+        # create buckets if they don't already exist
+        mc mb --ignore-existing local/com-sdr;
+        mc mb --ignore-existing local/oedi-data-lake;
+        mc mb --ignore-existing local/plot-results;
+        mc mb --ignore-existing local/res-sdr;
+        # set them to public
+        mc anonymous set public local/com-sdr;
+        mc anonymous set public local/oedi-data-lake;
+        mc anonymous set public local/plot-results;
+        mc anonymous set public local/res-sdr;
+        # automatic file expiration (if the rule hasn't already been added)
+        mc ilm rule export local/plot-results >/dev/null 2>&1 || ([ $? -eq 1 ] && mc ilm rule add --expire-days 7 local/plot-results)
+      "
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    restart: "no"
+
+  dashboard:
+    container_name: prefect-dashboard
+    build: ./dashboard
+    image: prefect-dashboard:latest
+    env_file:
+      - ./.env
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./share:/share
+    restart: unless-stopped
