@@ -90,6 +90,9 @@ async def configure_prefect():
     print("Configuring Docker pool")
 
     async with get_client() as client:
+        # Concurrency limits
+        await client.create_concurrency_limit(tag="download", concurrency_limit=4)
+
         try:
             pool = await client.read_work_pool(pool_name)
         except ObjectNotFound as error:

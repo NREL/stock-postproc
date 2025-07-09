@@ -27,8 +27,8 @@ services:
       - ./pgdata:/var/lib/postgresql/17/docker
     restart: unless-stopped
 
-  prefect-worker:
-    container_name: prefect-worker
+  prefect-docker-worker:
+    container_name: prefect-docker-worker
     build: ./worker
     image: prefect-worker:latest
     depends_on:
@@ -40,6 +40,21 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: prefect worker start --pool docker-pool --type docker --name DockerWorker
+    restart: unless-stopped
+
+  prefect-process-worker:
+    container_name: prefect-process-worker
+    build: ./worker
+    image: prefect-worker:latest
+    depends_on:
+      - prefect
+    env_file:
+      - ./.env
+    environment:
+      - PREFECT_API_URL=http://prefect:4200/api
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: prefect worker start --pool process-pool --type process --name ProcessWorker
     restart: unless-stopped
 
   minio:
