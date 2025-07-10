@@ -108,7 +108,8 @@ async def configure_prefect():
                 "TZ": "America/Denver",
             },
             "networks": ["prefect_default"],
-            "volumes": ["/share/appdata/prefect/share:/share"],
+            # "volumes": ["/share/appdata/prefect/share:/share"],
+            "volumes": ["/home/aswindle/docker/prefect/share:/share"],
         }
         template = pool.base_job_template
         # Set defaults for all docker runs
