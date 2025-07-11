@@ -93,11 +93,13 @@ services:
         mc mb --ignore-existing local/oedi-data-lake;
         mc mb --ignore-existing local/plot-results;
         mc mb --ignore-existing local/res-sdr;
+        mc mb --ignore-existing local/resstock-core;
         # set them to public
         mc anonymous set public local/com-sdr;
         mc anonymous set public local/oedi-data-lake;
         mc anonymous set public local/plot-results;
         mc anonymous set public local/res-sdr;
+        mc anonymous set public local/resstock-core;
         # automatic file expiration (if the rule hasn't already been added)
         mc ilm rule export local/plot-results >/dev/null 2>&1 || ([ $? -eq 1 ] && mc ilm rule add --expire-days 7 local/plot-results)
       "

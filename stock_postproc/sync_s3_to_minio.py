@@ -11,12 +11,11 @@ def get_object_name(key: str) -> str:
 
 
 @task(
-    name="Parse S3 URL",
-    task_run_name="Parse S3 URL",
+    task_run_name="Verify Cache",
 )
 def parse_s3_url(s3_url: str) -> tuple[str, str]:
     """
-    Parse an S3 URL of the form s3://bucket-name/path/to/object.txt
+    Parse an S3 URL of the form s3://bucket-name/path/to/object.parquet
     and return (bucket, key).
     """
     parsed = urllib.parse.urlparse(s3_url)
@@ -27,15 +26,9 @@ def parse_s3_url(s3_url: str) -> tuple[str, str]:
     return bucket, key
 
 
-def download_task_title() -> str:
-    params = task_run.parameters
-    name = get_object_name(params["key"])
-    return f"Download {name}"
-
-
 @task(
     name="Download",
-    task_run_name=download_task_title,
+    task_run_name=lambda: f"Download {get_object_name(task_run.parameters['key'])}",
     tags=["download"],
 )
 def download(
@@ -67,14 +60,23 @@ def download(
     logger.info(f"Synchronized {key!r} → MinIO")
 
 
-@flow(name="Sync S3 to MinIO", log_prints=True)
+@flow(
+    name="Sync S3 to MinIO",
+    flow_run_name="Sync {s3_url}",
+    log_prints=True,
+)
 def sync_s3_to_minio(s3_url: str, filename_filter: str | None = None):
     logger = get_run_logger()
 
-    aws_bucket = S3Bucket.load("aws-oedi-data-lake")
-    minio_bucket = S3Bucket.load("minio-oedi-data-lake")
-
     bucket, key = parse_s3_url(s3_url)
+
+    try:
+        aws_bucket = S3Bucket.load(f"aws-{bucket}")
+        minio_bucket = S3Bucket.load(f"minio-{bucket}")
+    except ValueError as e:
+        logger.error(f"Prefect hasn't been configured to sync the bucket {bucket!r}")
+        raise e
+
     files = aws_bucket.list_objects(key)
     if filename_filter:
         files = [f for f in files if filename_filter in get_object_name(f["Key"])]

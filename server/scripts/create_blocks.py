@@ -21,6 +21,8 @@ from pydantic import SecretStr
 
 load_dotenv()
 
+buckets = ["com-sdr", "res-sdr", "resstock-core"]
+
 
 async def configure_prefect():
     # Create AWS credentials
@@ -46,15 +48,11 @@ async def configure_prefect():
     # Create AWS buckets
     print("Creating AWS buckets")
 
-    await S3Bucket(
-        bucket_name="com-sdr",
-        credentials=aws_credentials_block,
-    ).save("aws-com-sdr", overwrite=True)
-
-    await S3Bucket(
-        bucket_name="res-sdr",
-        credentials=aws_credentials_block,
-    ).save("aws-res-sdr", overwrite=True)
+    for bucket in buckets:
+        await S3Bucket(
+            bucket_name=bucket,
+            credentials=aws_credentials_block,
+        ).save(f"aws-{bucket}", overwrite=True)
 
     await S3Bucket(
         bucket_name="oedi-data-lake",
@@ -77,8 +75,7 @@ async def configure_prefect():
     # Create MinIO buckets
     print("Creating MinIO buckets")
 
-    buckets = ["com-sdr", "oedi-data-lake", "plot-results", "res-sdr"]
-    for bucket in buckets:
+    for bucket in ["oedi-data-lake", "plot-results", *buckets]:
         await S3Bucket(
             bucket_name=bucket,
             credentials=minio_credentials_block,
