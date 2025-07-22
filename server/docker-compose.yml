@@ -83,26 +83,21 @@ services:
       minio:
         condition: service_healthy
     entrypoint: >
-      /bin/sh -c "
-        # configure the mc alias for the MinIO server
-        mc alias set local http://minio:10000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
-        # configure compression for html and svg files
-        mc admin config set local compression extensions='.txt, .log, .csv, .json, .tar, .xml, .bin, .html, .svg'
-        # create buckets if they don't already exist
-        mc mb --ignore-existing local/com-sdr;
-        mc mb --ignore-existing local/oedi-data-lake;
-        mc mb --ignore-existing local/plot-results;
-        mc mb --ignore-existing local/res-sdr;
-        mc mb --ignore-existing local/resstock-core;
-        # set them to public
-        mc anonymous set public local/com-sdr;
-        mc anonymous set public local/oedi-data-lake;
-        mc anonymous set public local/plot-results;
-        mc anonymous set public local/res-sdr;
-        mc anonymous set public local/resstock-core;
-        # automatic file expiration (if the rule hasn't already been added)
-        mc ilm rule export local/plot-results >/dev/null 2>&1 || ([ $? -eq 1 ] && mc ilm rule add --expire-days 7 local/plot-results)
-      "
+      /bin/sh -c '
+        set -e
+        mc alias set local http://minio:10000 "${MINIO_ROOT_USER}" "${MINIO_ROOT_PASSWORD}"
+
+        mc admin config set local compression extensions=".txt, .log, .csv, .json, .tar, .xml, .bin, .html, .svg"
+
+        buckets="com-sdr oedi-data-lake plot-results res-sdr resstock-core"
+        for bucket in $buckets; do
+          mc mb --ignore-existing local/$bucket
+          mc anonymous set public local/$bucket
+        done
+
+        # Set expiration on plot-results if not already present
+        mc ilm rule export local/plot-results >/dev/null 2>&1 || mc ilm rule add --expire-days 7 local/plot-results
+      '
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
