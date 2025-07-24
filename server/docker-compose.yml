@@ -114,3 +114,18 @@ services:
     volumes:
       - ./share:/share
     restart: unless-stopped
+
+  dynamic-dashboard:
+    container_name: prefect-dynamic-dashboard
+    build:
+      context: ./dynamic_dashboard
+      args:
+        CACHEBUST: ${CACHEBUST}
+    image: prefect-dynamic-dashboard:latest
+    env_file:
+      - ./.env
+    ports:
+      - "8051:8051"
+    volumes:
+      - ./share:/share
+    restart: unless-stopped
